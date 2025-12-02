@@ -10,26 +10,33 @@
         }
         div#res{
             background-color: green;
-            width: 250px;
+            width: 340px;
             padding: 10px;
             color: white;
             margin-bottom: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <h1>Radar de velocidade</h1>
-    <div id="res" onclick="clique()">Clique para ver o resultado!</div>
-    <div id="resp">Resultado</div>
+     Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res">
 
+    </div>
     <script>
-        var d = window.document.getElementById('res')
-        a.addEventListener('click', clicar)
-        var a = window.document.getElementById('resp')
-        function clique(){
-            d.innerHTML = 'Calculando...'}
-        var vel = 70
-    
+        
+        function calcular(){
+            var txtv = window.document.getElementById('txtvel')
+            var res = window.document.getElementById('res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> km/h</p>`
+            if (vel > 60){
+                res.innerHTML += '<p>Você foi <strong>MULTADO</strong></p>'
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança</P>`
+        }
     </script>
 </body>
 </html>
