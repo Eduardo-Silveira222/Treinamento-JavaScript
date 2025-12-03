@@ -42,6 +42,9 @@ function verificar() {
                 img.setAttribute('src', '-imagens/foto-idosa.jpg')
             }
         }
+        img.style.borderRadius = '50%'
+        img.style.marginLeft = '20px'
+        img.style.marginTop = '20px'
         res.style.textAlign = 'center'
         res.innerHTML = `Detectamos ${gen} com ${idade} anos`
         res.appendChild(img)
