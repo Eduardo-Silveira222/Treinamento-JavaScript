@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis composta</title>
+</head>
+<body>
+    <h1>Vetor na Tela</h1>
+    <div id="tela"><p>Olá!</p></div>
+    <input type="button" value="Mostrar Vetor" onclick="clicar()">
+    <script>
+        function clicar(){
+            let valores = [5,6,8,2,1,3,7,4]
+            let tela = document.getElementById('tela')
+            valores.push(9)
+            valores.sort()
+            
+            tela.innerText = []
+            
+            for(let pos = 0; pos < valores.length; pos++){
+                tela.innerText += ` ${valores[pos]}`
+            }
+        }
+
+    </script>
+</body>
+</html>
