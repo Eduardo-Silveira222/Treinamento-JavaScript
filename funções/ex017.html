@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções e parametros</title>
+</head>
+
+<body>
+    <div>
+        <p id="tela">Descubra se o numero é par ou impar!</p>
+    </div>
+    <div><p><input type="number" id="txtn"> <input type="button" value="Verificar" onclick="verificar()"></p></div>
+    <script>
+        function verificar(){
+            let num = document.getElementById('txtn')
+            let n = Number(num.value)
+            let tela = document.getElementById('tela')
+
+            tela.innerText = ` ola ${n}`
+        }
+    </script>
+
+</body>
+
+</html>
