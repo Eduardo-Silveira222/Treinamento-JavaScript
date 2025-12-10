@@ -8,6 +8,7 @@
 <body>
     <h1>Vetor na Tela</h1>
     <div id="tela"><p>Olá!</p></div>
+    <div id="tela2"><p> Aqui será mostrado em que posição esta o valor 1</p></div>
     <input type="button" value="Mostrar Vetor" onclick="clicar()">
     <script>
         function clicar(){
@@ -21,6 +22,11 @@
             for(let pos = 0; pos < valores.length; pos++){
                 tela.innerText += ` ${valores[pos]}`
             }
+            let tela2 = document.getElementById('tela2')
+            let num = valores.indexOf(1)
+            
+            tela2.innerHTML = num
+
         }
 
     </script>
