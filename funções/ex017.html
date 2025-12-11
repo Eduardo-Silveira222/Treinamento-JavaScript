@@ -16,10 +16,20 @@
         function verificar(){
             let num = document.getElementById('txtn')
             let n = Number(num.value)
-            let tela = document.getElementById('tela')
+            let tela1 = document.getElementById('tela')
 
-            tela.innerText = ` ola ${n}`
+            function parimp(n){
+                if(n%2 == 0) {
+                    return 'Par!'
+                }else {
+                    return 'Impar!'
+                }
+            }
+            let res = parimp(n)
+            tela1.innerHTML = `O valor inserido é ${res}`
         }
+        
+        
     </script>
 
 </body>
